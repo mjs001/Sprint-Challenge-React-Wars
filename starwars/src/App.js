@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from "axios";
+import CharCard from "./components/characterCards";
 
 const App = () => {
   const [CharacterData, setCharacterData] = useState([]);
@@ -18,6 +19,9 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">React Wars</h1>
+      <div className="content">
+        <CharCard charInfo={CharacterData.results} />
+      </div>
     </div>
   );
 };
